@@ -1,0 +1,714 @@
+/* BASE AND RESET */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 16px; */
+  font-size: 18px;
+}
+
+/* VARIABLES */
+
+:root {
+  --primary-color: #592e83;
+  --accent-color: #b47e00;
+  --light-green-color: #f7feef;
+  --light-gray-color: #f8f3f5;
+  --light-purple-color: #e5dde6;
+}
+
+/* HELPERS */
+
+.text-center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* TYPOGRAPHY */
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 4.12rem;
+  margin-bottom: 0.5em;
+  line-height: 2.18rem;
+}
+
+h1 span {
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 100;
+  line-height: 2.18rem;
+  background-color: white;
+  width: 80%;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5em;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2.2em;
+}
+
+h2,
+h3 {
+  color: var(--accent-color);
+  /* color: var(--primary-color); */
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.56rem;
+}
+
+li {
+  line-height: 30px;
+}
+
+/* REUSABLE */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg-light-green {
+  background-color: var(--light-green-color);
+}
+
+.bg-primary p,
+.bg-primary h2 {
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: var(--light-gray-color);
+}
+
+.bg-breast {
+  /* background-image: url("./images/peitos-fundo-mais.png"); */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  /* border: 1px solid blue; */
+}
+
+.flex-r {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.pt-80 {
+  padding-top: 80px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+/* HEADER */
+
+.name {
+  transition: opacity 0.3s ease;
+}
+.sentinela {
+  position: absolute;
+  top: 20px;
+  height: 1px;
+}
+
+body:has(.sentinela:top) .name {
+  opacity: 1;
+}
+
+body:not(:has(.sentinela:top)) .name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+#logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logo img {
+  width: 40px;
+  height: 40px;
+}
+
+/* NAV MENU */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  padding: 1.2em;
+  line-height: normal;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  align-self: end;
+}
+
+#check {
+  display: none;
+}
+
+.content-box {
+  width: 50%;
+  /* border: 1px solid red; */
+  text-align: justify;
+  /* padding-top: 4rem; */
+}
+
+.content-box p {
+  margin-bottom: 2em;
+}
+
+.img-box {
+  width: 40%;
+  position: relative;
+}
+
+.img-box img {
+  /* width: auto;
+  height: 530px; */
+  border-radius: 4px;
+}
+
+.hero {
+  background-image: url("./images/capa-wide.jpg");
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.hero .img-box img {
+  position: absolute;
+}
+
+.btn {
+  padding: 1em;
+  background-color: #fff;
+  color: var(--primary-color);
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  transition: 0.5s;
+}
+
+section {
+  padding: 220px 0 120px 0;
+}
+
+#inicio {
+  padding-top: 220px;
+}
+
+#inicio .content-box {
+  text-align: left;
+}
+
+.img-rounded {
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+#sobre .img-box img {
+  /* width: auto; */
+  width: 100%;
+  height: auto;
+}
+
+#sobre li {
+  /* list-style-image: url("../images/breast.png"); */
+}
+
+section {
+  padding-top: 80px;
+}
+
+section h2 {
+  text-align: center;
+}
+
+#sobre h2 {
+  text-align: left;
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  width: 25%;
+  min-width: 360px;
+  /* flex-grow: 1; */
+  flex-shrink: 1;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card .text-container {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .text-container strong {
+  color: var(--accent-color);
+}
+
+.card img {
+  /* width: 100%; */
+  /* width: 360px;
+  height: 270px; */
+}
+
+.card p {
+  line-height: 25px;
+  text-align: justify;
+}
+
+/* SERVIÇOS */
+
+#servicos .row {
+  gap: 25px;
+}
+
+#servicos .card,
+#planos .card {
+  width: 30%;
+}
+
+#servicos .card strong {
+  font-size: 26px;
+  text-align: center;
+}
+
+/* PLANOS */
+
+#planos h3 {
+  color: rgb(67, 0, 83);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+  background-image: linear-gradient(
+    80deg,
+    rgb(98, 0, 128) 9%,
+    rgb(119, 36, 197) 24%
+  );
+  font-family: Roboto, sans-serif;
+  font-size: 2rem;
+}
+
+#planos strong {
+  color: var(--accent-color);
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+}
+
+#planos .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#planos .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 25%;
+  min-width: 360px;
+  margin: 0 auto 3em auto;
+}
+
+#planos .text-container p {
+  text-align: justify;
+}
+
+.plus {
+  font-size: 1.5rem;
+}
+
+/* CARTÃO PRESENTE */
+
+#vale-presente {
+  background-color: var(--light-purple-color);
+}
+
+.gift-card {
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  border-radius: 20px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2em auto;
+}
+
+.gift-card strong {
+  font-size: 2rem;
+  color: #fff;
+  padding-top: 2.2em;
+  margin-bottom: 0.5em;
+}
+
+.gift-card p {
+  font-size: 0.8rem;
+  color: #fff;
+  width: 50%;
+  text-align: left;
+}
+
+.gift-card .cta {
+  color: var(--light-purple-color);
+  font-weight: bold;
+  text-decoration: none;
+  display: inline;
+}
+
+.gift-card .cta:hover {
+  color: var(--primary-color);
+}
+
+/* INSTAGRAM */
+
+.eui-widget-title {
+  color: var(--accent-color);
+  font-size: 3rem;
+}
+
+/* CONTATO */
+
+#contato .content-box {
+  width: 30%;
+  min-width: 300px;
+}
+
+#contato a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#contato a:hover {
+  color: var(--accent-color);
+}
+
+#contato .img-box {
+  margin-bottom: 3em;
+}
+
+.fa-envelope,
+.fa-phone {
+  font-size: 30px;
+  color: #fff;
+}
+
+.fa-facebook,
+.fa-instagram {
+  color: #fff;
+  font-size: 30px;
+}
+
+.link-text {
+  margin-left: 10px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon-link a {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+}
+
+#contato li {
+  color: #fff;
+}
+
+#contato .row .row {
+  margin-top: 40px;
+  justify-content: space-evenly;
+}
+
+#contato .img-box {
+  width: 100%;
+  text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+  display: block;
+  background-color: #25d366;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  border-radius: 40px;
+  padding: 10px 12px;
+  z-index: 2;
+}
+
+.whatsapp img {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  #inicio .content-box {
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  #servicos .card {
+    width: 100%;
+  }
+
+  #planos .text-container {
+    width: 100%;
+  }
+
+  nav ul li {
+    padding: 1em;
+  }
+
+  #inicio .content-box {
+    width: 80%;
+  }
+  .gift-card {
+  width: 60%;
+  height: 230px;
+}
+}
+
+@media screen and (max-width: 768px) {
+
+  h1 {
+    line-height: 4rem;
+  }
+
+  h2,
+  .eui-widget-title {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  #planos h3 {
+    font-size: 1.5rem;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  header {
+    padding: 0.5em 0;
+    position: static;
+  }
+
+  header .row {
+    flex-direction: column;
+  }
+
+  #logo {
+    display: none;
+  }
+
+
+  .hero {
+    background-image: url('./images/capa-portrait.webp');
+    /* background-image: url('./images/capa-portrait.jpg'); */
+    background-size: cover;
+    background-position: 90%;
+    /* background-position: 22%; */
+    /* background-position-y: center;
+    background-position-x: center; */
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+
+  nav ul {
+    flex-direction: column;
+    gap: 1px;
+    text-align: center;
+    display: none;
+  }
+
+  #check:checked ~ nav ul {
+    display: block;
+  }
+
+  section {
+    padding-top: 60px;
+  }  
+
+  #servicos .card {
+    width: 100%;
+  }
+
+  #planos .text-container {
+    width: 100%;
+  }
+
+  .content-box,
+  .img-box {
+    width: 100%;
+  }
+
+  #inicio {
+    padding-top: 50px;
+  }
+
+  #inicio {
+    text-align: center;
+  }
+
+  #inicio img {
+    margin-top: 20px;
+    width: 100%;
+    position: static;
+  }
+
+  #inicio .content-box {
+    /* text-align: center; */
+  }  
+
+  #sobre h2 {
+    margin-top: 20px;
+  }
+
+  #contato .content-box {
+    width: 100%;
+  }
+
+  .gift-card {
+    width: 100%;
+    height: 200px;
+  }
+
+  .gift-card strong {
+    font-size: 1.3rem;
+    padding-top: 0;
+  }
+
+  .gift-card p {
+    font-size: 0.8rem;
+    line-height: 1.3em;
+    width: 90%;
+    /* display: none; */
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+
+  
+}

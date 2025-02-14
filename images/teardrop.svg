@@ -1,0 +1,7 @@
+<svg width="0" height="0" style="position:absolute;">
+    <defs>
+        <clipPath id="teardropPath" clipPathUnits="objectBoundingBox">
+            <path d="M 0.5 0 C 0 0, 0 0.5, 0.5 1 C 1 0.5, 1 0, 0.5 0 Z"/>
+        </clipPath>
+    </defs>
+</svg>

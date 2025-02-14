@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.amandadoval.com.br/sitemap.xml

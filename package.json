@@ -1,0 +1,27 @@
+{
+  "name": "consultora-materno-infantil",
+  "version": "1.0.0",
+  "description": "This is a website developed for a maternal and child consultant, who wants to communicate her work with pregnant women and with breastfeeding consultancy.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "sass --watch ./src/assets/scss/styles.scss:styles.css --style=compressed",
+    "build:css": "sass ./src/assets/scss/styles.scss ./src/assets/css/styles.css --style=compressed",
+    "build:clean": "rm -rf dist && mkdir dist",
+    "build:copy": "cp src/index.html dist && cp ./robots.txt dist && cp ./sitemap.xml dist && mkdir -p dist/assets && cp -r src/assets/css dist/assets/ && mkdir -p dist/assets && cp -r src/assets/images dist/assets/",
+    "build": "npm run build:clean && npm run build:css && npm run build:copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luacal/consultora-materno-infantil.git"
+  },
+  "author": "Luã Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luacal/consultora-materno-infantil/issues"
+  },
+  "homepage": "https://github.com/luacal/consultora-materno-infantil#readme",
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}

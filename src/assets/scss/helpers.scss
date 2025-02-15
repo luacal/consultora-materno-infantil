@@ -1,0 +1,63 @@
+/* HELPERS */
+
+.text-center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg-light-green {
+  background-color: var(--light-green-color);
+}
+
+.bg-primary p,
+.bg-primary h2 {
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: var(--light-gray-color);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  /* border: 1px solid blue; */
+}
+
+.flex-r {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.pt-80 {
+  padding-top: 80px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.bg-breast {
+  background-image: url("./images/peitos-fundo-mais.png");
+}

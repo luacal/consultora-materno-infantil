@@ -455,7 +455,7 @@ footer {
   }
 
   h1 span {
-    width: 90%;
+    width: 95%;
   }
 
   h2,
@@ -465,6 +465,10 @@ footer {
 
   h3 {
     font-size: 1.8rem;
+  }
+
+  #planos h3 {
+    margin-bottom: 0.5em;
   }
 
   .btn {
@@ -527,6 +531,7 @@ footer {
 
   section {
     padding-top: 60px;
+    padding-bottom: 60px;
   }  
 
   #servicos .card {

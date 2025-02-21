@@ -147,6 +147,31 @@ section {
   height: auto;
 }
 
+.custom-ul {
+  padding: 0;
+}
+
+.custom-ul li {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 8px;
+}
+
+.custom-bullet {
+ width: 20px;
+ height: 20px;
+ background-image: url('../images/mama.png');
+ background-size: contain;
+ background-repeat: no-repeat;
+ display: block;
+ margin-top: 4px;
+}
+
+.list-text {
+  flex: 1;
+}
+
 #sobre li {
   /* list-style-image: url("../images/breast.png"); */
 }

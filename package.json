@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:css": "sass --watch ./src/assets/scss/styles.scss:styles.css --style=compressed",
+    "watch:css": "sass --watch ./src/assets/scss/styles.scss:./src/assets/css/styles.css --style=compressed",
     "build:css": "sass ./src/assets/scss/styles.scss ./src/assets/css/styles.css --style=compressed",
     "build:clean": "rm -rf dist && mkdir dist",
     "build:copy": "cp src/index.html dist && cp ./robots.txt dist && cp ./sitemap.xml dist && mkdir -p dist/assets && cp -r src/assets/css dist/assets/ && mkdir -p dist/assets && cp -r src/assets/images dist/assets/",
